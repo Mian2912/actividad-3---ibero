@@ -8,7 +8,7 @@ Comandos para el desarrollo de la actividad 3 base de datos sobre el particionam
     ```
 - conectarse al config server en el puerto 27019
     ```bash
-    mongo --port 27019
+    mongosh --port 27019
     ```
 - Ejecuta el comando:
     ```bash
@@ -30,7 +30,7 @@ Comandos para el desarrollo de la actividad 3 base de datos sobre el particionam
 ### Inicializar las replica sets de los shards
 - conectarse al shard 1
     ```bash
-    mongo --port 27018
+    mongosh --port 27018
     ```
 - ejecutar el siguiente comando
     ```bash
@@ -41,7 +41,7 @@ Comandos para el desarrollo de la actividad 3 base de datos sobre el particionam
     ```
 - conectarse al shard 2
     ```bash
-    mongo --port 27017
+    mongosh --port 27017
     ```
 - ejecutar el siguiente comando
     ```bash
@@ -52,13 +52,13 @@ Comandos para el desarrollo de la actividad 3 base de datos sobre el particionam
     ```
 
 ## configuracion del router
-- Ejecuta este comando en la terminal para iniciar el router en el puerto 2702
+- Ejecuta este comando en la terminal para iniciar el router en el puerto 27020
     ```bash
-    mongos --configdb configReplSet/localhost:27019 --port 27020 --bind_ip localhost
+    mongod --configdb configReplSet/localhost:27019 --port 27020 --bind_ip localhost
     ```
 - conexion al puerto 27020
     ```bash
-    mongo --port 27020
+    mongosh --port 27020
     ```
 - ejecutar los siguientes comandos
     ```bash
